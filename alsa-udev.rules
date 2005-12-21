@@ -1,0 +1,1 @@
+SUBSYSTEM=="sound", KERNEL=="controlC*", RUN+="/etc/udev/scripts/alsa.sh %n"
