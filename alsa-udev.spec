@@ -25,6 +25,7 @@ udev rules and scripts for Advanced Linux Sound Architecture.
 Regu³y i skrypty udev dla Advanced Linux Sound Architecture.
 
 %prep
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
