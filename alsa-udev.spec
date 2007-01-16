@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 udev rules and scripts for Advanced Linux Sound Architecture.
 
-%description
+%description -l pl
 Regu³y i skrypty udev dla Advanced Linux Sound Architecture.
 
 %prep
