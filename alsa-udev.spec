@@ -29,11 +29,11 @@ Reguły i skrypty udev dla Advanced Linux Sound Architecture.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -D %{SOURCE0} $RPM_BUILD_ROOT/etc/udev/rules.d/alsa.rules
+install -d $RPM_BUILD_ROOT/etc/udev/rules.d
+sed -e 's#/lib/udev/#/%{_lib}/udev/#g' %{SOURCE0} > $RPM_BUILD_ROOT/etc/udev/rules.d/alsa.rules
 install -D %{SOURCE1} $RPM_BUILD_ROOT/%{_lib}/udev/alsa-udev
 install -D %{SOURCE2} $RPM_BUILD_ROOT/etc/sysconfig/alsa-udev
 install -D %{SOURCE3} $RPM_BUILD_ROOT/etc/rc.d/init.d/alsa-udev
-sed -i -e 's#/lib/udev/#/%{_lib}/udev/#g' %{SOURCE0}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
