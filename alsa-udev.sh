@@ -5,7 +5,7 @@
 CARD=$1
 
 . /etc/rc.d/init.d/functions
-[ -f /etc/sysconfig/alsa_udev ] && . /etc/sysconfig/alsa_udev
+[ -f /etc/sysconfig/alsa-udev ] && . /etc/sysconfig/alsa-udev
 
 case "$ACTION" in
     add)
