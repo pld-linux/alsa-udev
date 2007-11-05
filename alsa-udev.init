@@ -30,7 +30,7 @@
 . /etc/rc.d/init.d/functions
 
 alsactl=/usr/sbin/alsactl
-
+subsyslock=var/lock/subsys/alsa-udev
 detect_stop()
 {
   #
@@ -57,12 +57,12 @@ driver_stop()
 # See how we were called.
 case "$1" in
   start)
-	#Not Needed, its for udev
+	touch $subsyslock
 	;;
   stop)
 	# Stop daemons.
 	if [ -d /proc/asound ]; then
-		show "Shutting down sound driver:"
+		show "Shutting down sound driver"
 		busy
 		if [ -f /proc/asound/detect ]; then
 			detect_stop
@@ -70,6 +70,7 @@ case "$1" in
 			driver_stop
 		fi
 		(rmmod isapnp; rmmod soundcore) 2> /dev/null
+		[ -f $subsyslock ] && rm $subsyslock
  		ok
 	else
 		msg_not_running "ALSA driver"
