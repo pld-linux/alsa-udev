@@ -30,7 +30,7 @@
 . /etc/rc.d/init.d/functions
 
 alsactl=/usr/sbin/alsactl
-subsyslock=var/lock/subsys/alsa-udev
+subsyslock=/var/lock/subsys/alsa-udev
 detect_stop()
 {
   #
