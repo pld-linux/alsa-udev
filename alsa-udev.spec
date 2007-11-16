@@ -2,7 +2,7 @@ Summary:	udev rules and scripts for Advanced Linux Sound Architecture
 Summary(pl.UTF-8):	Reguły i skrypty udev dla Advanced Linux Sound Architecture
 Name:		alsa-udev
 Version:	0.1
-Release:	0.3
+Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	%{name}.rules
