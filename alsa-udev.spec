@@ -2,7 +2,7 @@ Summary:	udev rules and scripts for Advanced Linux Sound Architecture
 Summary(pl.UTF-8):	Reguły i skrypty udev dla Advanced Linux Sound Architecture
 Name:		alsa-udev
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	%{name}.rules
@@ -12,7 +12,7 @@ Source3:	%{name}.init
 URL:		http://www.alsa-project.org/
 Requires(post,preun):	/sbin/chkconfig
 Requires:	awk
-Requires:	udev >= 075
+Requires:	udev-core >= 075
 Obsoletes:	alsa-init-tools
 Obsoletes:	alsa-utils-init
 Obsoletes:	alsaconf
